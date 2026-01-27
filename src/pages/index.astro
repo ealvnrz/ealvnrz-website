@@ -1,0 +1,125 @@
+---
+import PageHead from '@/components/PageHead.astro'
+import SocialIcons from '@/components/SocialIcons.astro'
+import DiscordPresence from '@/components/DiscordPresence'
+import GithubCalendar from '@/components/GithubCalendar'
+import { Badge } from '@/components/ui/badge'
+import { SITE, SOCIAL_LINKS } from '@/consts'
+import Layout from '@/layouts/Layout.astro'
+import newsData from '@/data/news.json'
+
+// Discord User ID
+const DISCORD_USER_ID = '187396536534171648'
+
+// GitHub username
+const GITHUB_USERNAME = 'ealvnrz'
+
+// News items (sorted by date, most recent first)
+const newsItems = newsData.items.sort((a, b) => {
+  return new Date(b.date).getTime() - new Date(a.date).getTime()
+})
+---
+
+<Layout class="max-w-5xl">
+  <PageHead slot="head" title="Home" />
+  
+  <!-- Intro Section -->
+  <section class="border bg-muted/30">
+    <div class="flex flex-col space-y-3 p-4">
+      <div>
+        <h1 class="text-3xl font-bold mb-1">Eloy Alvarado Narváez</h1>
+        <p class="text-muted-foreground text-base">
+          Assistant Professor<br />
+          Department of Statistics<br />
+          Faculty of Mathematics<br />
+          Pontificia Universidad Católica de Chile
+        </p>
+        <div class="flex items-center gap-4 mt-3">
+          <SocialIcons links={SOCIAL_LINKS} />
+        </div>
+      </div>
+      <div>
+        <h2 class="text-xl font-semibold mb-3">About</h2>
+        <p class="text-muted-foreground mb-3 text-sm text-justify">
+          I am an Assistant Professor in the Department of Statistics, <a href="https://www.mat.uc.cl/" class="text-primary hover:text-primary/80 underline underline-offset-2" target="_blank" rel="noopener noreferrer">Faculty of Mathematics</a>, at <a href="https://www.uc.cl/" class="text-primary hover:text-primary/80 underline underline-offset-2" target="_blank" rel="noopener noreferrer">Pontificia Universidad Católica de Chile</a>. 
+          My research focuses on spatial statistics, copula modeling, and statistical methods for spatial data. I received my Ph.D. in Statistics from Universidad de Valparaíso in 2022, where I worked 
+          on spatial copula models and their applications to bounded support data.
+        </p>
+        <p class="text-muted-foreground mb-2 text-sm">
+          My research interests include:
+        </p>
+        <div class="flex flex-wrap gap-1.5">
+          <Badge variant="default">Spatial Statistics</Badge>
+          <Badge variant="default">Copula Modeling</Badge>
+          <Badge variant="default">Random Fields</Badge>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discord Presence and News Blocks (Side by Side) -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <!-- Discord Presence / Now Playing Block -->
+    {DISCORD_USER_ID && (
+      <DiscordPresence 
+        client:load
+        userId={DISCORD_USER_ID}
+        username="peperclipp"
+      />
+    )}
+    
+    <!-- News Block -->
+    <section class="border bg-muted/30">
+      <div class="p-4">
+        <h2 class="text-xl font-semibold mb-3">News</h2>
+        <div class="flex flex-col gap-3">
+          {newsItems.length > 0 ? (
+            newsItems.map((item) => (
+              <div class="flex flex-col gap-1">
+                <div class="flex items-start justify-between gap-2">
+                  <h3 class="text-sm font-semibold leading-tight">{item.title}</h3>
+                  <span class="text-xs text-muted-foreground whitespace-nowrap">
+                    {new Date(item.date + 'T12:00:00').toLocaleDateString('en-US', { 
+                      year: 'numeric', 
+                      month: 'short', 
+                      day: 'numeric' 
+                    })}
+                  </span>
+                </div>
+                <p class="text-xs text-muted-foreground leading-relaxed">
+                  {item.content}
+                </p>
+              </div>
+            ))
+          ) : (
+            <p class="text-sm text-muted-foreground">
+              No news at this time.
+            </p>
+          )}
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- GitHub Contributions Calendar Block -->
+  <section class="border bg-muted/30">
+    <div class="p-4">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="text-xl font-semibold">GitHub Contributions</h2>
+        <a
+          href={`https://github.com/${GITHUB_USERNAME}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-xs text-muted-foreground hover:text-primary underline"
+        >
+          @{GITHUB_USERNAME}
+        </a>
+      </div>
+      <GithubCalendar 
+        client:load
+        username={GITHUB_USERNAME}
+      />
+    </div>
+  </section>
+
+</Layout>

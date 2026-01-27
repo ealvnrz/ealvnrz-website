@@ -1,0 +1,85 @@
+{
+  "personal": {
+    "name": "Your Name",
+    "title": "Researcher & Academic",
+    "email": "your.email@university.edu",
+    "website": "https://your-website.com",
+    "location": "City, Country"
+  },
+  "education": [
+    {
+      "degree": "Ph.D. in [Field]",
+      "institution": "University Name",
+      "location": "City, Country",
+      "year": "2020-2024",
+      "thesis": "Thesis Title (if applicable)",
+      "advisor": "Advisor Name"
+    },
+    {
+      "degree": "M.S. in [Field]",
+      "institution": "University Name",
+      "location": "City, Country",
+      "year": "2018-2020"
+    },
+    {
+      "degree": "B.S. in [Field]",
+      "institution": "University Name",
+      "location": "City, Country",
+      "year": "2014-2018"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Postdoctoral Researcher",
+      "institution": "University/Institution Name",
+      "location": "City, Country",
+      "period": "2024 - Present",
+      "description": "Description of research and responsibilities."
+    },
+    {
+      "title": "Research Assistant",
+      "institution": "University Name",
+      "location": "City, Country",
+      "period": "2020 - 2024",
+      "description": "Description of research work and contributions."
+    }
+  ],
+  "publications": {
+    "note": "See Publications page for full list",
+    "count": 0
+  },
+  "awards": [
+    {
+      "title": "Award Name",
+      "organization": "Organization Name",
+      "year": "2024",
+      "description": "Brief description of the award"
+    }
+  ],
+  "teaching": [
+    {
+      "course": "Course Name",
+      "role": "Teaching Assistant / Instructor",
+      "institution": "University Name",
+      "period": "Fall 2023",
+      "description": "Brief description of teaching responsibilities"
+    }
+  ],
+  "skills": {
+    "technical": [
+      "Programming Languages: Python, JavaScript, C++",
+      "Frameworks: TensorFlow, PyTorch",
+      "Tools: Git, LaTeX, Docker"
+    ],
+    "languages": [
+      {
+        "language": "English",
+        "proficiency": "Native/Fluent"
+      },
+      {
+        "language": "Spanish",
+        "proficiency": "Fluent"
+      }
+    ]
+  }
+}

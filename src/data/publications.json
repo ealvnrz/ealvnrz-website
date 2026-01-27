@@ -1,0 +1,112 @@
+{
+  "papers": [
+    {
+      "title": "Deep learning-based classification of species in central-southern fisheries in Chile",
+      "authors": ["Eloy Alvarado", "Francisco Plaza-Vega", "Carlos Montenegro", "Oscar Saavedra"],
+      "venue": "Latin American Journal of Aquatic Research",
+      "year": 2025,
+      "type": "journal",
+      "abstract": "This study introduces a novel deep learning methodology for identifying fish species in central-southern Chile's pelagic and demersal fisheries. Using a dataset of 8,118 high-resolution images encompassing 18 species, two Convolutional Neural Networks (CNNs) were developed: a custom-designed CNN, which achieved an overall accuracy of 86% (95% CI: [0.8355; 0.8826]), and an adapted VGG16 model, which reached 95% (95% CI: [0.9355; 0.9651]) when tested on the same set of 811 images. While both models perform strongly, challenges persist for specific species, particularly Brama australis and Strangomera bentincki, with 33 and 53% classification rates in the VGG16 model, highlighting opportunities for dataset enrichment and algorithmic refinements. Additionally, Gradient-weighted Class Activation Mapping (Grad-CAM) was employed to visually interpret the decision-making process of the CNN, providing insight into the regions of the image most relevant to classification. Developed using the Keras API and TensorFlow framework within the R programming environment, our approach underscores the importance of advanced computational tools in enhancing species classification. The results lay the groundwork for future expansions into comprehensive frameworks utilizing computer vision to recognize fish species on board, quantify catches, and detect discards and bycatch. These advancements could significantly benefit Fisheries Observer programs, enhancing enforcement and aiding sustainable fisheries management. Ultimately, this work promotes efficiency and efficacy in monitoring, fostering a sustainable future for marine biodiversity in Chile and potentially other regions and wider marine ecosystems.",
+      "links": {
+        "doi": "https://doi.org/10.3856/vol53-issue3-fulltext-3318",
+        "pdf": "https://lajar.cl/index.php/rlajar/article/download/vol53-issue3-fulltext-3318/2019"
+      }
+    },
+    {
+      "title": "A flexible Clayton-like spatial copula with application to bounded support data",
+      "authors": ["Moreno Bevilacqua", "Eloy Alvarado", "Christian Caamaño-Carrillo"],
+      "venue": "Journal of Multivariate Analysis",
+      "year": 2024,
+      "type": "journal",
+      "abstract": "The Gaussian copula is a powerful tool that has been widely used to model spatial and/or temporal correlated data with arbitrary marginal distributions. However, this kind of model can potentially be too restrictive since it expresses a reflection symmetric dependence. In this paper, we propose a new spatial copula model that makes it possible to obtain random fields with arbitrary marginal distributions with a type of dependence that can be reflection symmetric or not.",
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jmva.2023.105277",
+        "arxiv": "https://arxiv.org/abs/2305.18166"
+      }
+    },
+    {
+      "title": "Tooth Loss and Caries Experience of Elderly Chileans in the Context of the COVID-19 Pandemic in Five Regions of Chile",
+      "authors": ["Víctor Beltrán", "Marco Flores", "Cristina Sanzana", "Fernanda Muñoz-Sepúlveda", "Eloy Alvarado", "Bernardo Venegas", "Juan Carlos Molina", "Sandra Rueda-Velásquez", "Alfredo von Marttens"],
+      "venue": "International Journal of Environmental Research and Public Health",
+      "year": 2023,
+      "type": "journal",
+      "abstract": "Risk factors associated with tooth loss have been studied; however, the current status of the epidemiological profiles and the impact of the pandemic on the oral health of the elderly is still unknown. This study aims to determine the experience of caries and tooth loss among elderly Chilean citizens in five regions and to identify the risk factors associated with tooth loss. The sample includes 135 participants over 60 years old assessed during COVID-19 lockdown. Sociodemographic variables such as education and RSH (Social Registry of Households) were obtained through a teledentistry platform called TEGO. The history of chronic diseases such as diabetes, obesity, depression and dental caries reported by DMFT index scores were incorporated. The statistical analysis included Adjusted Odds Ratios (ORs) to assess risk factors associated with the lack of functional dentition. Multivariate hypothesis testing was used to compare the mean equality of DMFT and its components between regions (p-value < 0.05). Individuals with RSH ≤ 40% were at higher risk of having no functional dentition with OR 4.56 (95% CI: 1.71, 12.17). The only mean difference between regions was the filled tooth component. Tooth loss was associated with multidimensional lower income, where the elderly belonging to the 40% most vulnerable population had a higher prevalence of non-functional dentition. This study highlights the importance of implementing a National Oral Health Policy that focuses on oral health promotion and minimally invasive dentistry for the most vulnerable population.",
+      "links": {
+        "doi": "https://doi.org/10.3390/ijerph20043001",
+        "pdf": "https://www.mdpi.com/1660-4601/20/4/3001/pdf"
+      }
+    },
+    {
+      "title": "Implementation of a Teledentistry Platform for Dental Emergencies for the Elderly in the Context of the COVID-19 Pandemic in Chile",
+      "authors": ["Víctor Beltrán", "Alfredo von Marttens", "Pablo Acuña-Mardones", "Cristina Sanzana-Luengo", "Sandra J Rueda-Velásquez", "Eloy Alvarado", "Marco Flores", "Angeline Cerda", "Bernardo Venegas"],
+      "venue": "BioMed Research International",
+      "year": 2022,
+      "type": "journal",
+      "abstract": "The COVID-19 pandemic has significantly impacted healthcare delivery, particularly for vulnerable populations such as the elderly. This study presents the implementation of a teledentistry platform designed to address dental emergencies for elderly patients in Chile during the pandemic. The platform, called TEGO, was developed as a web-based and mobile application solution to provide remote dental consultations and emergency care. The system enables general dentists and specialists to assess dental conditions remotely, provide recommendations, and coordinate emergency care when necessary. This work describes the platform's architecture, functionality, and implementation process, highlighting its role in maintaining access to dental care during lockdown periods. The platform addresses the critical need for accessible dental services for the elderly population, who are at higher risk for both COVID-19 complications and oral health issues.",
+      "links": {
+        "doi": "https://doi.org/10.1155/2022/6889285",
+        "pdf": "https://downloads.hindawi.com/journals/bmri/2022/6889285.pdf"
+      }
+    },
+    {
+      "title": "TEGO: A new concept of teledentistry for the elderly through a web platform and mobile app in the context of the covid-19 pandemic.",
+      "authors": ["Víctor Beltrán", "Pablo Acuña Mardones", "Jaime Díaz", "Eloy Alvarado", "Alfredo von Marttens"],
+      "venue": "Journal of Oral Research",
+      "year": 2022,
+      "type": "journal",
+      "abstract": "This paper presents TEGO, a novel teledentistry concept developed to address the dental care needs of elderly patients during the COVID-19 pandemic. The platform combines web-based and mobile application technologies to enable remote dental consultations and emergency care coordination. TEGO was designed specifically for the elderly population, taking into account their unique needs and potential technology barriers. The system allows dental professionals to assess conditions remotely, provide guidance, and coordinate in-person care when necessary. This work describes the conceptual framework, technological implementation, and initial deployment of the TEGO platform in Chile, demonstrating its effectiveness in maintaining access to dental services during pandemic-related restrictions.",
+      "links": {
+        "doi": "https://doi.org/10.17126/joralres.2022.023",
+        "pdf": "https://www.joralres.com/index.php/JOralRes/article/view/joralres.2022.023/995"
+      }
+    },
+    {
+      "title": "Teledentistry protocol for the elderly in the context of the COVID-19 pandemic through a web platform/mobile app: approach from the general dentist.",
+      "authors": ["Cristina Sanzana-Luengo", "Leonardo Díaz", "Liliann Abarza", "Eloy Alvarado", "Víctor Beltrán"],
+      "venue": "Journal of Oral Research",
+      "year": 2022,
+      "type": "journal",
+      "links": {
+        "doi": "https://doi.org/10.17126/joralres.2022.026"
+      }
+    },
+    {
+      "title": "REDACS: Regional emergency-driven adaptive cluster sampling for effective COVID-19 management",
+      "authors": ["M. Stehlík", "J. Kisel'ák", "A. Dinamarca", "E. Alvarado", "F. Plaza", "F.A. Medina", "S. Stehlíková", "J. Marek", "B. Venegas", "A. Gajdoš"],
+      "venue": "Stochastic Analysis and Applications",
+      "year": 2022,
+      "type": "journal",
+      "abstract": "This paper introduces REDACS (Regional Emergency-Driven Adaptive Cluster Sampling), a novel statistical sampling methodology designed for effective COVID-19 management at the regional level. The approach combines adaptive cluster sampling techniques with emergency-driven decision-making processes to optimize resource allocation and data collection during pandemic situations. REDACS addresses the challenges of rapidly changing epidemiological conditions by adapting sampling strategies based on real-time regional data. The methodology enables more efficient monitoring, testing, and resource distribution in response to evolving COVID-19 dynamics. This work presents the theoretical framework, implementation strategies, and demonstrates the effectiveness of REDACS in managing regional COVID-19 responses through adaptive statistical sampling.",
+      "links": {
+        "doi": "https://doi.org/10.1080/07362994.2022.2033126",
+        "pdf": "https://www.tandfonline.com/doi/pdf/10.1080/07362994.2022.2033126"
+      }
+    },
+    {
+      "title": "Drift parameter identification for the Ornstein-Uhlenbeck process driven by Ornstein-Uhlenbeck with small General Gaussian noise",
+      "authors": ["H. Araya", "F. Plaza-Vega", "E. Alvarado"],
+      "venue": "Statistical Papers",
+      "year": "forthcoming",
+      "type": "journal",
+      "links": {}
+    }
+  ],
+  "underReview": [
+    {
+      "title": "Contagion, Financial Distress and Divergent Beliefs",
+      "authors": ["E. Farías", "E. Alvarado", "J. Scavia"],
+      "venue": "",
+      "year": null,
+      "type": "journal",
+      "links": {}
+    },
+    {
+      "title": "Drift parameter estimation for the noisy Ornstein-Uhlenbeck process driven by a Rosenblatt process",
+      "authors": ["H. Araya", "F. Plaza-Vega", "E. Alvarado"],
+      "venue": "",
+      "year": null,
+      "type": "journal",
+      "links": {}
+    }
+  ]
+}

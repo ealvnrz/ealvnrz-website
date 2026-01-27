@@ -1,0 +1,36 @@
+{
+  "grants": [
+    {
+      "title": "Spatial extension of the Gumbel copula: applications to some non-Gaussian random fields",
+      "agency": "Fondecyt de Iniciación 2025 ANID",
+      "period": "2025-2027",
+      "role": "Principal Investigator",
+      "status": "active",
+      "description": "Fondecyt de Iniciación 2025 ANID No. 11250479."
+    },
+    {
+      "title": "Modeling and estimating massive point referenced spatial data",
+      "agency": "MATH-AMSUD",
+      "period": "2023-2024",
+      "role": "Research Associate",
+      "status": "completed",
+      "description": "MATH-AMSUD AMSUD220041."
+    },
+    {
+      "title": "National Doctoral Degree",
+      "agency": "ANID",
+      "period": "2018-2022",
+      "role": "Principal Investigator",
+      "status": "completed",
+      "description": "ANID No. 2018-21180953."
+    },
+    {
+      "title": "Semi-presential technological support platform for urgent and priority dental care for the elderly in the context of the COVID-19 pandemic in the Chilean population",
+      "agency": "ANID",
+      "period": "2020",
+      "role": "Collaborator",
+      "status": "completed",
+      "description": "ANID, Reference No. COVID0766, Chile."
+    }
+  ]
+}

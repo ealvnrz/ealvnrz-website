@@ -1,0 +1,84 @@
+---
+import Link from '@/components/Link.astro'
+import PageHead from '@/components/PageHead.astro'
+import Layout from '@/layouts/Layout.astro'
+
+// GitHub raw URL for the CV PDF
+const cvPdfUrl = 'https://raw.githubusercontent.com/ealvnrz/CV/master/cv_en/cv_en.pdf'
+const cvGitHubUrl = 'https://github.com/ealvnrz/CV/blob/master/cv_en/cv_en.pdf'
+---
+
+<Layout class="max-w-5xl">
+  <PageHead slot="head" title="CV" />
+  <section class="flex flex-col gap-y-4">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div>
+        <h1 class="text-4xl font-bold mb-2">Curriculum Vitae</h1>
+        <p class="text-muted-foreground">
+          Eloy Alvarado Narváez
+        </p>
+      </div>
+      <div class="flex gap-2">
+        <Link
+          href={cvPdfUrl}
+          class="text-sm text-primary hover:text-primary/80 underline"
+          external
+          download
+        >
+          Download PDF
+        </Link>
+        <span class="text-muted-foreground">•</span>
+        <Link
+          href={cvGitHubUrl}
+          class="text-sm text-primary hover:text-primary/80 underline"
+          external
+        >
+          View on GitHub
+        </Link>
+      </div>
+    </div>
+
+    <!-- PDF Viewer using object tag for better embedding -->
+    <div class="w-full border bg-muted/30" style="min-height: 800px;">
+      <object
+        data={`${cvPdfUrl}#toolbar=1&navpanes=1&scrollbar=1`}
+        type="application/pdf"
+        class="w-full h-full"
+        style="min-height: 800px; border: none;"
+        title="Curriculum Vitae PDF"
+      >
+        <div class="p-8 text-center">
+          <p class="text-muted-foreground mb-4">
+            Your browser doesn't support PDF embedding.
+          </p>
+          <p class="mb-4">
+            <Link href={cvPdfUrl} class="text-primary hover:text-primary/80 underline" external download>
+              Download the PDF
+            </Link>
+            {' '}or{' '}
+            <Link href={cvGitHubUrl} class="text-primary hover:text-primary/80 underline" external>
+              view it on GitHub
+            </Link>.
+          </p>
+        </div>
+      </object>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Ensure PDF viewer is responsive */
+  object {
+    width: 100%;
+    min-height: 800px;
+    height: 100vh;
+    max-height: 1200px;
+  }
+  
+  @media (max-width: 768px) {
+    object {
+      min-height: 600px;
+      height: 80vh;
+    }
+  }
+</style>

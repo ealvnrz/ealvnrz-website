@@ -1,0 +1,354 @@
+---
+import Link from '@/components/Link.astro'
+import PageHead from '@/components/PageHead.astro'
+import { Badge } from '@/components/ui/badge'
+import Layout from '@/layouts/Layout.astro'
+import publicationsData from '@/data/publications.json'
+
+interface Paper {
+  title: string
+  authors: string[]
+  venue: string
+  year: number | string | null
+  type: 'conference' | 'journal' | 'workshop' | 'preprint'
+  abstract?: string
+  links?: {
+    pdf?: string
+    arxiv?: string
+    doi?: string
+    code?: string
+    website?: string
+  }
+}
+
+const papers: Paper[] = (publicationsData.papers as Paper[]).sort((a, b) => {
+  // Handle string years (like "forthcoming") - put them at the top
+  if (typeof a.year === 'string' && typeof b.year === 'string') {
+    // Both are strings, keep original order
+    return 0
+  }
+  if (typeof a.year === 'string') {
+    // a is "forthcoming", put it first
+    return -1
+  }
+  if (typeof b.year === 'string') {
+    // b is "forthcoming", put it first
+    return 1
+  }
+  // Handle null years
+  if (!a.year && !b.year) return 0
+  if (!a.year) return 1
+  if (!b.year) return -1
+  // Both are numbers, sort descending
+  if (typeof a.year === 'number' && typeof b.year === 'number') {
+    return b.year - a.year
+  }
+  return 0
+})
+const underReview: Paper[] = ((publicationsData.underReview || []) as Paper[]).sort((a, b) => {
+  // Handle null years by putting them at the end
+  if (!a.year && !b.year) return 0
+  if (!a.year) return 1
+  if (!b.year) return -1
+  // Handle string years
+  if (typeof a.year === 'string' || typeof b.year === 'string') return 0
+  // Both are numbers, sort descending
+  if (typeof a.year === 'number' && typeof b.year === 'number') {
+    return b.year - a.year
+  }
+  return 0
+})
+
+// Function to format authors with highlighting
+function formatAuthors(authors: string[]): string {
+  const myNameVariations = ['Eloy Alvarado', 'E. Alvarado', 'Eloy Alvarado Narváez']
+  
+  return authors.map(author => {
+    // Check if author matches any variation (case-insensitive, handles partial matches)
+    const isMyName = myNameVariations.some(name => {
+      const authorLower = author.toLowerCase()
+      const nameLower = name.toLowerCase()
+      return authorLower.includes(nameLower) || nameLower.includes(authorLower) ||
+             authorLower === nameLower
+    })
+    
+    if (isMyName) {
+      return `<strong class="text-primary font-semibold">${author}</strong>`
+    }
+    return author
+  }).join(', ')
+}
+---
+
+<Layout class="max-w-5xl">
+  <PageHead slot="head" title="Publications" />
+  <section class="flex flex-col gap-y-6">
+    <div>
+      <h1 class="text-4xl font-bold mb-2">Publications</h1>
+      <p class="text-muted-foreground">
+        A list of my academic publications and research papers.
+      </p>
+    </div>
+
+    {underReview.length > 0 && (
+      <div>
+        <details open class="group">
+          <summary class="cursor-pointer list-none">
+            <h2 class="text-2xl font-semibold mb-4 inline-flex items-center gap-2">
+              Submitted/Under Review
+              <span class="text-sm font-normal text-muted-foreground group-open:rotate-180 transition-transform">
+                ▼
+              </span>
+            </h2>
+          </summary>
+          <ul class="flex flex-col gap-y-4">
+          {
+            underReview.map((paper) => (
+              <li class="border bg-muted/30 p-4 rounded-md flex flex-col gap-y-1.5">
+                <div class="flex flex-col gap-y-0.5">
+                  <div class="flex items-start justify-between gap-2">
+                    <h3 class="text-base font-semibold leading-tight flex-1">{paper.title}</h3>
+                    <Badge variant="muted" className="text-xs shrink-0">Under Review</Badge>
+                  </div>
+                  <p 
+                    class="text-muted-foreground text-xs leading-tight"
+                    set:html={formatAuthors(paper.authors)}
+                  />
+                  <p class="text-muted-foreground text-xs">
+                    {paper.venue && (
+                      <>
+                        <span class="font-medium">{paper.venue}</span>
+                        {paper.year && (
+                          <>
+                            {' • '}
+                            {paper.year}
+                          </>
+                        )}
+                      </>
+                    )}
+                    {!paper.venue && paper.year && (
+                      <>{paper.year}</>
+                    )}
+                  </p>
+                </div>
+                {
+                  paper.abstract && (
+                    <details class="mt-1">
+                      <summary class="cursor-pointer text-xs text-muted-foreground hover:text-foreground">
+                        Abstract
+                      </summary>
+                      <p class="mt-1.5 text-xs text-muted-foreground pl-3 border-l-2">
+                        {paper.abstract}
+                      </p>
+                    </details>
+                  )
+                }
+                {
+                  paper.links && (
+                    <div class="flex flex-wrap gap-1.5 mt-1">
+                      {
+                        paper.links.doi && (
+                          <Link
+                            href={paper.links.doi}
+                            class="text-xs text-muted-foreground hover:text-foreground underline"
+                            external
+                          >
+                            DOI
+                          </Link>
+                        )
+                      }
+                      {
+                        paper.links.pdf && (
+                          <Link
+                            href={paper.links.pdf}
+                            class="text-xs text-muted-foreground hover:text-foreground underline"
+                            external
+                          >
+                            PDF
+                          </Link>
+                        )
+                      }
+                      {
+                        paper.links.arxiv && (
+                          <Link
+                            href={paper.links.arxiv}
+                            class="text-xs text-muted-foreground hover:text-foreground underline"
+                            external
+                          >
+                            arXiv
+                          </Link>
+                        )
+                      }
+                      {
+                        paper.links.code && (
+                          <Link
+                            href={paper.links.code}
+                            class="text-xs text-muted-foreground hover:text-foreground underline"
+                            external
+                          >
+                            Code
+                          </Link>
+                        )
+                      }
+                      {
+                        paper.links.website && (
+                          <Link
+                            href={paper.links.website}
+                            class="text-xs text-muted-foreground hover:text-foreground underline"
+                            external
+                          >
+                            Website
+                          </Link>
+                        )
+                      }
+                    </div>
+                  )
+                }
+              </li>
+            ))
+          }
+          </ul>
+        </details>
+      </div>
+    )}
+
+    {papers.length > 0 && (
+      <div>
+        <details open class="group">
+          <summary class="cursor-pointer list-none">
+            <h2 class="text-2xl font-semibold mb-4 inline-flex items-center gap-2">
+              Accepted/Published
+              <span class="text-sm font-normal text-muted-foreground group-open:rotate-180 transition-transform">
+                ▼
+              </span>
+            </h2>
+          </summary>
+          <ul class="flex flex-col gap-y-4">
+          {
+            papers.map((paper) => (
+              <li class="border bg-muted/30 p-4 rounded-md flex flex-col gap-y-1.5">
+                <div class="flex flex-col gap-y-0.5">
+                  <h3 class="text-base font-semibold leading-tight">{paper.title}</h3>
+                  <p 
+                    class="text-muted-foreground text-xs leading-tight"
+                    set:html={formatAuthors(paper.authors)}
+                  />
+                  <p class="text-muted-foreground text-xs">
+                    <span class="font-medium">{paper.venue}</span>
+                    {paper.year && (
+                      <>
+                        {' • '}
+                        {paper.year}
+                      </>
+                    )}
+                  </p>
+                </div>
+                {
+                  paper.abstract && (
+                    <details class="mt-1">
+                      <summary class="cursor-pointer text-xs text-muted-foreground hover:text-foreground">
+                        Abstract
+                      </summary>
+                      <p class="mt-1.5 text-xs text-muted-foreground pl-3 border-l-2">
+                        {paper.abstract}
+                      </p>
+                    </details>
+                  )
+                }
+                {
+                  paper.links && (
+                    <div class="flex flex-wrap gap-1.5 mt-1">
+                      {
+                        paper.links.doi && (
+                          <Link
+                            href={paper.links.doi}
+                            class="text-xs text-muted-foreground hover:text-foreground underline"
+                            external
+                          >
+                            DOI
+                          </Link>
+                        )
+                      }
+                      {
+                        paper.links.pdf && (
+                          <Link
+                            href={paper.links.pdf}
+                            class="text-xs text-muted-foreground hover:text-foreground underline"
+                            external
+                          >
+                            PDF
+                          </Link>
+                        )
+                      }
+                      {
+                        paper.links.arxiv && (
+                          <Link
+                            href={paper.links.arxiv}
+                            class="text-xs text-muted-foreground hover:text-foreground underline"
+                            external
+                          >
+                            arXiv
+                          </Link>
+                        )
+                      }
+                      {
+                        paper.links.code && (
+                          <Link
+                            href={paper.links.code}
+                            class="text-xs text-muted-foreground hover:text-foreground underline"
+                            external
+                          >
+                            Code
+                          </Link>
+                        )
+                      }
+                      {
+                        paper.links.website && (
+                          <Link
+                            href={paper.links.website}
+                            class="text-xs text-muted-foreground hover:text-foreground underline"
+                            external
+                          >
+                            Website
+                          </Link>
+                        )
+                      }
+                    </div>
+                  )
+                }
+              </li>
+            ))
+          }
+          </ul>
+        </details>
+      </div>
+    )}
+  </section>
+</Layout>
+
+<style>
+  /* Hide default details marker */
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  details summary {
+    list-style: none;
+  }
+  
+  /* Smooth transition for content */
+  details[open] summary ~ * {
+    animation: slideDown 0.2s ease-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
