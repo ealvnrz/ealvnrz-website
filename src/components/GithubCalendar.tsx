@@ -6,11 +6,14 @@ import { ActivityCalendar, type Props as ActivityCalendarProps } from 'react-act
 
 interface Props extends Omit<ActivityCalendarProps, 'data' | 'theme'> {
   username: string
+  year?: number
 }
 
-async function fetchCalendarData(username: string): Promise<ApiResponse> {
+async function fetchCalendarData(username: string, year?: number): Promise<ApiResponse> {
+  const currentYear = new Date().getFullYear()
+  const yearParam = year || currentYear
   const response = await fetch(
-    `https://github-contributions-api.jogruber.de/v4/${username}?y=last`,
+    `https://github-contributions-api.jogruber.de/v4/${username}?y=${yearParam}`,
   )
   const data: ApiResponse | ApiErrorResponse = await response.json()
 
@@ -25,7 +28,7 @@ async function fetchCalendarData(username: string): Promise<ApiResponse> {
   return data as ApiResponse
 }
 
-const GithubCalendar: FunctionComponent<Props> = ({ username, ...props }) => {
+const GithubCalendar: FunctionComponent<Props> = ({ username, year, ...props }) => {
   const [data, setData] = useState<ApiResponse | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<Error | null>(null)
@@ -34,11 +37,11 @@ const GithubCalendar: FunctionComponent<Props> = ({ username, ...props }) => {
   const fetchData = useCallback(() => {
     setLoading(true)
     setError(null)
-    fetchCalendarData(username)
+    fetchCalendarData(username, year)
       .then(setData)
       .catch(setError)
       .finally(() => setLoading(false))
-  }, [username])
+  }, [username, year])
 
   useEffect(fetchData, [fetchData])
 
@@ -95,8 +98,12 @@ const GithubCalendar: FunctionComponent<Props> = ({ username, ...props }) => {
     return <Skeleton className="h-[150px] w-full" />
   }
 
-  // Show full year of contributions (365 days) like GitHub profile
-  const yearData = selectLastNDays(data.contributions, 365)
+  // Filter contributions for the specified year (or current year)
+  const targetYear = year || new Date().getFullYear()
+  const yearData = data.contributions.filter((activity) => {
+    const activityDate = new Date(activity.date)
+    return activityDate.getFullYear() === targetYear
+  })
 
   return (
     <div className="[&_.react-activity-calendar\\_\\_legend-month]:text-foreground/80 w-full overflow-x-auto flex justify-center">
@@ -131,17 +138,6 @@ interface ApiResponse {
 
 interface ApiErrorResponse {
   error: string
-}
-
-const selectLastNDays = (contributions: Activity[], days: number) => {
-  const today = new Date()
-  const startDate = new Date(today)
-  startDate.setDate(today.getDate() - days)
-
-  return contributions.filter((activity) => {
-    const activityDate = new Date(activity.date)
-    return activityDate >= startDate && activityDate <= today
-  })
 }
 
 export default GithubCalendar
