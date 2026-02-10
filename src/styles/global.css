@@ -3,22 +3,6 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @font-face {
-  font-family: 'Geist';
-  src: url('/fonts/GeistVF.woff2') format('woff2-variations');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Geist Mono';
-  src: url('/fonts/GeistMonoVF.woff2') format('woff2-variations');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'JetBrains Mono';
   src: url('/fonts/JetBrainsMono[wght].woff2') format('woff2-variations'),
        url('/fonts/JetBrainsMono[wght].ttf') format('truetype-variations');
@@ -38,14 +22,12 @@
 
 @theme inline {
   --font-sans:
-    'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-    'Noto Color Emoji';
-  --font-serif:
-    'Iowan Old Style', 'Palatino Linotype', Palatino, 'Times New Roman', serif;
+    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-mono:
-    'JetBrains Mono', 'Geist Mono', ui-monospace, SFMono-Regular, Menlo,
-    Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
