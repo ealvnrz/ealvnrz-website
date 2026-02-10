@@ -57,50 +57,53 @@
   --background: oklch(0.99 0.005 90);
   /* Foreground: Carbon Black (#252422) - darker text for better contrast */
   --foreground: oklch(0.20 0.005 60);
-  /* Primary: Spicy Paprika (#eb5e28) - lively zesty hue for links and actions */
-  --primary: oklch(0.65 0.18 40);
+  /* Primary: Kimi orange (≈ #f97316) */
+  --primary: oklch(0.705 0.187 47.6);
   --primary-foreground: oklch(0.99 0.005 90);
   /* Secondary: Silver (#ccc5b9) - lustrous metallic secondary */
   --secondary: oklch(0.82 0.01 70);
   --secondary-foreground: oklch(0.20 0.005 60);
-  /* Accent: Spicy Paprika (#eb5e28) - accent for highlights */
-  --accent: oklch(0.65 0.18 40);
+  /* Accent: Kimi orange (≈ #f97316) */
+  --accent: oklch(0.705 0.187 47.6);
   --accent-foreground: oklch(0.20 0.005 60);
   /* Muted: Silver (#ccc5b9) - subtle background */
   --muted: oklch(0.90 0.01 70);
   --muted-foreground: oklch(0.45 0.01 60);
-  /* Destructive: Spicy Paprika (#eb5e28) - error color */
-  --destructive: oklch(0.65 0.18 40);
+  /* Destructive: Kimi orange (≈ #f97316) */
+  --destructive: oklch(0.705 0.187 47.6);
   /* Border: Silver (#ccc5b9) - subtle borders */
   --border: oklch(0.85 0.01 70);
-  /* Ring: Spicy Paprika for focus states */
-  --ring: oklch(0.65 0.18 40);
+  /* Ring: Kimi orange (≈ #f97316) */
+  --ring: oklch(0.705 0.187 47.6);
 }
 
 [data-theme='dark'] {
   /* Dark mode - Rustic Charm palette */
   /* Background: Carbon Black (#252422) - matte black with graphite hint */
-  --background: oklch(0.20 0.005 60);
+  /* Match #0a0a0a */
+  --background: oklch(0.145 0 0);
   /* Foreground: Floral White (#fffcf2) - luxurious misty white text */
-  --foreground: oklch(0.99 0.005 90);
-  /* Primary: Spicy Paprika (#eb5e28) - lively zesty hue for links and actions */
-  --primary: oklch(0.65 0.18 40);
+  /* Match #f5f5f5 */
+  --foreground: oklch(0.97 0 0);
+  /* Primary: Kimi orange (≈ #f97316) */
+  --primary: oklch(0.705 0.187 47.6);
   --primary-foreground: oklch(0.20 0.005 60);
   /* Secondary: Silver (#ccc5b9) - lustrous metallic secondary */
   --secondary: oklch(0.82 0.01 70);
   --secondary-foreground: oklch(0.99 0.005 90);
-  /* Accent: Spicy Paprika (#eb5e28) - accent for highlights */
-  --accent: oklch(0.65 0.18 40);
+  /* Accent: Kimi orange (≈ #f97316) */
+  --accent: oklch(0.705 0.187 47.6);
   --accent-foreground: oklch(0.20 0.005 60);
   /* Muted: Charcoal Brown (#403d39) - subtle background */
   --muted: oklch(0.30 0.005 60);
   --muted-foreground: oklch(0.75 0.01 70);
-  /* Destructive: Spicy Paprika (#eb5e28) - error color */
-  --destructive: oklch(0.65 0.18 40);
+  /* Destructive: Kimi orange (≈ #f97316) */
+  --destructive: oklch(0.705 0.187 47.6);
   /* Border: Charcoal Brown (#403d39) - visible with subtle color */
-  --border: oklch(0.35 0.005 60);
-  /* Ring: Spicy Paprika for focus states */
-  --ring: oklch(0.65 0.18 40);
+  /* Match hsl(24 50% 25%) */
+  --border: oklch(0.386 0.067 53.2);
+  /* Ring: Kimi orange (≈ #f97316) */
+  --ring: oklch(0.705 0.187 47.6);
 }
 
 @layer base {
