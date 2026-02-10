@@ -94,8 +94,8 @@
   /* Accent: Kimi orange (≈ #f97316) */
   --accent: oklch(0.705 0.187 47.6);
   --accent-foreground: oklch(0.20 0.005 60);
-  /* Muted: Charcoal Brown (#403d39) - subtle background */
-  --muted: oklch(0.30 0.005 60);
+  /* Muted tuned so bg-muted/30 ≈ #0f0f0f over #0a0a0a */
+  --muted: oklch(0.221 0 0);
   --muted-foreground: oklch(0.75 0.01 70);
   /* Destructive: Kimi orange (≈ #f97316) */
   --destructive: oklch(0.705 0.187 47.6);
