@@ -86,9 +86,10 @@ const newsItems = newsData.items.sort((a, b) => {
                     })}
                   </span>
                 </div>
-                <p class="text-xs text-muted-foreground leading-relaxed">
-                  {item.content}
-                </p>
+                <p
+                  class="text-xs text-muted-foreground leading-relaxed [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-2 [&_a]:hover:text-primary/80"
+                  set:html={item.content}
+                />
               </div>
             ))
           ) : (
