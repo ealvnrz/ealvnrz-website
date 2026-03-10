@@ -1,6 +1,11 @@
 {
   "items": [
     {
+      "date": "2025-03-06",
+      "title": "Presentation and session organization at CLAPEM 17",
+      "content": "I presented the talk 'Spatial copula models for non-gaussian random fields' at the 17th Latin American Congress of Probability and Mathematical Statistics (CLAPEM 17, https://clapem17.cmat.edu.uy/schedule/today). I also organized the contributed session 'Spatial processes and applications' (CS18)."
+    },
+    {
       "date": "2026-01-22",
       "title": "Paper accepted in Statistical Papers",
       "content": "Our paper 'Drift parameter identification for the Ornstein-Uhlenbeck process driven by Ornstein-Uhlenbeck with small General Gaussian noise' has been accepted for publication in Statistical Papers."
