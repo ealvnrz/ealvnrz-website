@@ -86,6 +86,16 @@
       "title": "Drift parameter identification for the Ornstein-Uhlenbeck process driven by Ornstein-Uhlenbeck with small General Gaussian noise",
       "authors": ["H. Araya", "F. Plaza-Vega", "E. Alvarado"],
       "venue": "Statistical Papers",
+      "year": 2026,
+      "type": "journal",
+      "links": {
+        "doi": "https://doi.org/10.1007/s00362-026-01804-3"
+      }
+    },
+    {
+      "title": "Drift parameter estimation for the noisy Ornstein-Uhlenbeck process driven by a Rosenblatt process",
+      "authors": ["H. Araya", "F. Plaza-Vega", "E. Alvarado"],
+      "venue": "Statistics and Probability Letters",
       "year": "forthcoming",
       "type": "journal",
       "links": {}
@@ -99,22 +109,6 @@
       "year": null,
       "type": "journal",
       "status": "Under Review",
-      "links": {}
-    },
-    {
-      "title": "Contagion, Financial Distress and Divergent Beliefs",
-      "authors": ["E. Farías", "E. Alvarado", "J. Scavia"],
-      "venue": "",
-      "year": null,
-      "type": "journal",
-      "links": {}
-    },
-    {
-      "title": "Drift parameter estimation for the noisy Ornstein-Uhlenbeck process driven by a Rosenblatt process",
-      "authors": ["H. Araya", "F. Plaza-Vega", "E. Alvarado"],
-      "venue": "",
-      "year": null,
-      "type": "journal",
       "links": {}
     }
   ]
