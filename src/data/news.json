@@ -1,6 +1,11 @@
 {
   "items": [
     {
+      "date": "2026-04-22",
+      "title": "Paper accepted in Statistics and Probability Letters",
+      "content": "Our paper 'Drift parameter estimation for the noisy Ornstein-Uhlenbeck process driven by a Rosenblatt process' (with H. Araya and F. Plaza-Vega) has been accepted for publication in <a href=\"https://www.sciencedirect.com/journal/statistics-and-probability-letters\" target=\"_blank\" rel=\"noopener noreferrer\">Statistics and Probability Letters</a>."
+    },
+    {
       "date": "2026-03-06",
       "title": "CLAPEM 17",
       "content": "I presented the talk 'Spatial copula models for non-gaussian random fields' at the 17th Latin American Congress of Probability and Mathematical Statistics (<a href=\"https://clapem17.cmat.edu.uy/home\" target=\"_blank\" rel=\"noopener noreferrer\">CLAPEM 17</a>)."
