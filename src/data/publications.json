@@ -96,9 +96,11 @@
       "title": "Drift parameter estimation for the noisy Ornstein-Uhlenbeck process driven by a Rosenblatt process",
       "authors": ["H. Araya", "F. Plaza-Vega", "E. Alvarado"],
       "venue": "Statistics and Probability Letters",
-      "year": "forthcoming",
+      "year": 2026,
       "type": "journal",
-      "links": {}
+      "links": {
+        "doi": "https://doi.org/10.1016/j.spl.2026.110803"
+      }
     }
   ],
   "underReview": [
