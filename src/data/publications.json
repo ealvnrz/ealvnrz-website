@@ -88,6 +88,7 @@
       "venue": "Statistical Papers",
       "year": 2026,
       "type": "journal",
+      "abstract": "We address the drift parameter identification problem for an Ornstein-Uhlenbeck process driven by an Ornstein-Uhlenbeck dynamic with small general Gaussian noise. The general Gaussian noise includes several processes such as fractional Brownian motion, sub-fractional Brownian motion, bi-fractional Brownian motion, and generalized sub-fractional Brownian motion, among others. By applying the least squares method, we obtain a parameter estimator for this model, whose convergence and a central-type limit theorem are established under certain conditions.",
       "links": {
         "doi": "https://doi.org/10.1007/s00362-026-01804-3"
       }
@@ -98,6 +99,7 @@
       "venue": "Statistics and Probability Letters",
       "year": 2026,
       "type": "journal",
+      "abstract": "We study the problem of estimating the drift parameter in a (non-ergodic) Ornstein–Uhlenbeck process driven by a Rosenblatt process and observed with additive Gaussian noise. Based on discrete observations, we construct a least squares estimator and a method-of-moments-type estimator for the drift. Under suitable conditions, we prove that both procedures are consistent in probability, even in the presence of measurement error. A Monte Carlo simulation study illustrates the finite-sample performance of the estimators under various long-memory regimes.",
       "links": {
         "doi": "https://doi.org/10.1016/j.spl.2026.110803"
       }
