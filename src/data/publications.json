@@ -72,7 +72,7 @@
     },
     {
       "title": "REDACS: Regional emergency-driven adaptive cluster sampling for effective COVID-19 management",
-      "authors": ["M. Stehlík", "J. Kisel'ák", "A. Dinamarca", "E. Alvarado", "F. Plaza", "F.A. Medina", "S. Stehlíková", "J. Marek", "B. Venegas", "A. Gajdoš"],
+      "authors": ["M. Stehlík", "J. Kisel'ák", "A. Dinamarca", "Eloy Alvarado", "F. Plaza", "F.A. Medina", "S. Stehlíková", "J. Marek", "B. Venegas", "A. Gajdoš"],
       "venue": "Stochastic Analysis and Applications",
       "year": 2022,
       "type": "journal",
@@ -84,7 +84,7 @@
     },
     {
       "title": "Drift parameter identification for the Ornstein-Uhlenbeck process driven by Ornstein-Uhlenbeck with small General Gaussian noise",
-      "authors": ["H. Araya", "F. Plaza-Vega", "E. Alvarado"],
+      "authors": ["Héctor Araya", "Francisco Plaza-Vega", "Eloy Alvarado"],
       "venue": "Statistical Papers",
       "year": 2026,
       "type": "journal",
@@ -95,7 +95,7 @@
     },
     {
       "title": "Drift parameter estimation for the noisy Ornstein-Uhlenbeck process driven by a Rosenblatt process",
-      "authors": ["H. Araya", "F. Plaza-Vega", "E. Alvarado"],
+      "authors": ["Héctor Araya", "Francisco Plaza-Vega", "Eloy Alvarado"],
       "venue": "Statistics and Probability Letters",
       "year": 2026,
       "type": "journal",
@@ -108,7 +108,7 @@
   "underReview": [
     {
       "title": "Structured Local Surrogates for Copula-Induced Pairwise Composite Likelihoods",
-      "authors": ["Eloy Alvarado", "H. Araya", "F. Plaza-Vega"],
+      "authors": ["Eloy Alvarado", "Héctor Araya", "Francisco Plaza-Vega"],
       "venue": "",
       "year": null,
       "type": "journal",
