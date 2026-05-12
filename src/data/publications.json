@@ -107,6 +107,15 @@
   ],
   "underReview": [
     {
+      "title": "Structured Local Surrogates for Copula-Induced Pairwise Composite Likelihoods",
+      "authors": ["Eloy Alvarado", "H. Araya", "F. Plaza-Vega"],
+      "venue": "",
+      "year": null,
+      "type": "journal",
+      "status": "Under Review",
+      "links": {}
+    },
+    {
       "title": "Weibull random fields for spatially dependent positive data: an application to mining haul roads",
       "authors": ["Eloy Alvarado", "Christian Caamaño-Carrillo", "David R. Godoy"],
       "venue": "",
