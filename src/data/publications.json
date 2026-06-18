@@ -103,21 +103,20 @@
       "links": {
         "doi": "https://doi.org/10.1016/j.spl.2026.110803"
       }
+    },
+    {
+      "title": "Weibull random fields for spatially dependent positive data: an application to mining haul roads",
+      "authors": ["Eloy Alvarado", "Christian Caamaño-Carrillo", "David R. Godoy"],
+      "venue": "International Statistical Review",
+      "year": "forthcoming (2025)",
+      "type": "journal",
+      "links": {}
     }
   ],
   "underReview": [
     {
       "title": "Structured Local Surrogates for Copula-Induced Pairwise Composite Likelihoods",
       "authors": ["Eloy Alvarado", "Héctor Araya", "Francisco Plaza-Vega"],
-      "venue": "",
-      "year": null,
-      "type": "journal",
-      "status": "Under Review",
-      "links": {}
-    },
-    {
-      "title": "Weibull random fields for spatially dependent positive data: an application to mining haul roads",
-      "authors": ["Eloy Alvarado", "Christian Caamaño-Carrillo", "David R. Godoy"],
       "venue": "",
       "year": null,
       "type": "journal",
