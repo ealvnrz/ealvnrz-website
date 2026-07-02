@@ -115,6 +115,15 @@
   ],
   "underReview": [
     {
+      "title": "Arbitrary-shape determinantal gamma fields",
+      "authors": ["Eloy Alvarado"],
+      "venue": "",
+      "year": null,
+      "type": "journal",
+      "status": "Submitted",
+      "links": {}
+    },
+    {
       "title": "Structured Local Surrogates for Copula-Induced Pairwise Composite Likelihoods",
       "authors": ["Eloy Alvarado", "Héctor Araya", "Francisco Plaza-Vega"],
       "venue": "",

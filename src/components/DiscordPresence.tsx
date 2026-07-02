@@ -23,19 +23,24 @@ interface Activity {
 }
 
 const DiscordSkeleton = () => (
-  <div className="relative overflow-hidden">
-    <div className="grid size-full grid-rows-4">
-      <Skeleton className="bg-muted/50" />
-      <div className="row-span-3 flex flex-col gap-3 p-3">
-        <div className="flex justify-between gap-x-1">
-          <Skeleton className="-mt-[3rem] aspect-square size-20 rounded-full" />
-          <Skeleton className="h-6 w-[118px] rounded-xl" />
+  <section className="border bg-muted/30">
+    <div className="p-4">
+      <div className="mb-3 flex items-center justify-between">
+        <Skeleton className="h-7 w-32" />
+        <Skeleton className="h-4 w-24" />
+      </div>
+      <div className="relative overflow-hidden rounded-xl border border-border/50">
+        <Skeleton className="h-24 w-full rounded-none" />
+        <div className="flex flex-col gap-4 p-4 md:flex-row md:items-stretch">
+          <div className="flex items-start gap-3 md:w-56 md:shrink-0">
+            <Skeleton className="-mt-12 aspect-square size-20 rounded-full" />
+            <Skeleton className="mt-2 h-14 flex-1 rounded-xl md:mt-0 md:flex-none md:w-full" />
+          </div>
+          <Skeleton className="min-h-[100px] flex-1 rounded-xl" />
         </div>
-        <Skeleton className="flex h-[62px] flex-col gap-y-1 rounded-xl p-3" />
-        <Skeleton className="flex min-h-[80px] grow rounded-xl p-2" />
       </div>
     </div>
-  </div>
+  </section>
 )
 
 const StatusIndicator = ({ status }: { status: DiscordStatus }) => {
@@ -330,43 +335,37 @@ const DiscordPresence = ({ userId, username = 'peperclipp', avatarSrc }: Discord
           )}
         </div>
 
-        <div className="relative">
-          <div className="grid grid-rows-4">
-            <div className="bg-muted/50"></div>
-            <div className="row-span-3 flex flex-col gap-3 p-3">
-              {/* Avatar and status */}
-              <div className="flex justify-between gap-x-1">
-                <div className="relative">
-                  <AvatarComponent
-                    src={avatarUrl}
-                    alt="Discord Avatar"
-                    fallback={username.charAt(0).toUpperCase()}
-                    className="-mt-[3rem] aspect-square size-20 rounded-full"
-                  />
-                  <StatusIndicator status={status} />
-                </div>
+        <div className="relative overflow-hidden rounded-xl border border-border/50">
+          <div className="bg-muted/50 h-24" />
+          <div className="flex flex-col gap-4 p-4 md:flex-row md:items-stretch">
+            <div className="flex items-start gap-3 md:w-56 md:shrink-0 md:flex-col">
+              <div className="relative shrink-0">
+                <AvatarComponent
+                  src={avatarUrl}
+                  alt="Discord Avatar"
+                  fallback={username.charAt(0).toUpperCase()}
+                  className="-mt-12 aspect-square size-20 rounded-full border-4 border-background md:-mt-14 md:size-24"
+                />
+                <StatusIndicator status={status} />
               </div>
-
-              {/* Username */}
-              <div className="bg-muted/50 flex flex-col gap-y-1 rounded-xl p-3">
-                <span className="text-base leading-none">{username}</span>
-                <span className="text-muted-foreground text-xs leading-none">
+              <div className="bg-muted/50 flex min-w-0 flex-1 flex-col gap-y-1 rounded-xl p-3 md:w-full md:flex-none">
+                <span className="truncate text-base leading-none">{username}</span>
+                <span className="text-muted-foreground truncate text-xs leading-none">
                   {lanyard.data.discord_user?.username || username}
                 </span>
               </div>
+            </div>
 
-              {/* Activity */}
-              <div className="bg-muted/50 flex min-h-[80px] grow rounded-xl px-3 py-2">
-                {mainActivity ? (
-                  <ActivityDisplay activity={mainActivity as Activity} />
-                ) : (
-                  <div className="flex size-full flex-col items-center justify-center gap-1">
-                    <div className="text-muted-foreground text-[10px]">
-                      No status!
-                    </div>
+            <div className="bg-muted/50 flex min-h-[100px] flex-1 items-center rounded-xl px-3 py-2">
+              {mainActivity ? (
+                <ActivityDisplay activity={mainActivity as Activity} />
+              ) : (
+                <div className="flex size-full flex-col items-center justify-center gap-1">
+                  <div className="text-muted-foreground text-[10px]">
+                    No status!
                   </div>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
