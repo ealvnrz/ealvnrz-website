@@ -87,6 +87,7 @@
       "authors": ["Héctor Araya", "Francisco Plaza-Vega", "Eloy Alvarado"],
       "venue": "Statistical Papers",
       "year": 2026,
+      "publishedDate": "2026-04-15",
       "type": "journal",
       "abstract": "We address the drift parameter identification problem for an Ornstein-Uhlenbeck process driven by an Ornstein-Uhlenbeck dynamic with small general Gaussian noise. The general Gaussian noise includes several processes such as fractional Brownian motion, sub-fractional Brownian motion, bi-fractional Brownian motion, and generalized sub-fractional Brownian motion, among others. By applying the least squares method, we obtain a parameter estimator for this model, whose convergence and a central-type limit theorem are established under certain conditions.",
       "links": {
@@ -98,6 +99,7 @@
       "authors": ["Héctor Araya", "Francisco Plaza-Vega", "Eloy Alvarado"],
       "venue": "Statistics and Probability Letters",
       "year": 2026,
+      "publishedDate": "2026-04-25",
       "type": "journal",
       "abstract": "We study the problem of estimating the drift parameter in a (non-ergodic) Ornstein–Uhlenbeck process driven by a Rosenblatt process and observed with additive Gaussian noise. Based on discrete observations, we construct a least squares estimator and a method-of-moments-type estimator for the drift. Under suitable conditions, we prove that both procedures are consistent in probability, even in the presence of measurement error. A Monte Carlo simulation study illustrates the finite-sample performance of the estimators under various long-memory regimes.",
       "links": {
@@ -109,6 +111,7 @@
       "authors": ["Eloy Alvarado", "Christian Caamaño-Carrillo", "David R. Godoy"],
       "venue": "International Statistical Review",
       "year": 2026,
+      "publishedDate": "2026-07-03",
       "type": "journal",
       "abstract": "Positive spatial data in remote sensing and infrastructure monitoring are often strictly positive, skewed and spatially dependent. Motivated by LiDAR intensity returns from mining haul roads, we propose a geostatistical framework based on Weibull random fields for modelling spatial degradation patterns within a condition-monitoring setting. Three constructions are studied: a Weibull field obtained from a transformation of Gaussian random fields, a Gaussian-copula Weibull field and a new Clayton-copula Weibull field with a parameter controlling departures from reflection symmetry. For the Clayton-Weibull construction, we establish stationarity, mean-square continuity and mean-square differentiability under conditions inherited from the latent Gaussian correlation model. For all three models, closed-form bivariate densities enable scalable inference through nearest-neighbour weighted pairwise composite likelihood. An expanded simulation study evaluates parameter recovery, model discrimination and standard-error calibration across sample sizes, spatial dependence levels, marginal skewness and Clayton asymmetry. The method is applied to LiDAR intensity data from an open-pit copper mine in Chile, where information criteria favour a Clayton-based specification with moderate asymmetry and improved agreement with empirical spatial dependence. The methods are implemented in the GeoModels R package.",
       "links": {

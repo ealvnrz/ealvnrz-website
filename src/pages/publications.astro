@@ -12,6 +12,7 @@ interface Paper {
   year: number | string | null
   type: 'conference' | 'journal' | 'workshop' | 'preprint'
   status?: string
+  publishedDate?: string
   abstract?: string
   links?: {
     pdf?: string
@@ -40,9 +41,12 @@ const papers: Paper[] = (publicationsData.papers as Paper[]).sort((a, b) => {
   if (!a.year && !b.year) return 0
   if (!a.year) return 1
   if (!b.year) return -1
-  // Both are numbers, sort descending
+  // Both are numbers, sort descending; tie-break by publishedDate when available
   if (typeof a.year === 'number' && typeof b.year === 'number') {
-    return b.year - a.year
+    if (b.year !== a.year) return b.year - a.year
+    const aDate = a.publishedDate ? new Date(a.publishedDate).getTime() : 0
+    const bDate = b.publishedDate ? new Date(b.publishedDate).getTime() : 0
+    return bDate - aDate
   }
   return 0
 })
