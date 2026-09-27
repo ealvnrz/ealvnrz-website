@@ -18,7 +18,7 @@
       "venue": "Journal of Multivariate Analysis",
       "year": 2024,
       "type": "journal",
-      "abstract": "The Gaussian copula is a powerful tool that has been widely used to model spatial and/or temporal correlated data with arbitrary marginal distributions. However, this kind of model can potentially be too restrictive since it expresses a reflection symmetric dependence. In this paper, we propose a new spatial copula model that makes it possible to obtain random fields with arbitrary marginal distributions with a type of dependence that can be reflection symmetric or not.",
+      "abstract": "The Gaussian copula is a powerful tool that has been widely used to model spatial and/or temporal correlated data with arbitrary marginal distributions. However, this kind of model can potentially be too restrictive since it expresses a reflection symmetric dependence. In this paper, we propose a new spatial copula model that makes it possible to obtain random fields with arbitrary marginal distributions with a type of dependence that can be reflection symmetric or not. Particularly, we propose a new random field with uniform marginal distributions that can be viewed as a spatial generalization of the classical Clayton copula model. It is obtained through a power transformation of a specific instance of a beta random field which in turn is obtained using a transformation of two independent Gamma random fields. For the proposed random field, we study the second-order properties and we provide analytic expressions for the bivariate distribution and its correlation. Finally, in the reflection symmetric case, we study the associated geometrical properties. As an application of the proposed model we focus on spatial modeling of data with bounded support. Specifically, we focus on spatial regression models with marginal distribution of the beta type. In a simulation study, we investigate the use of the weighted pairwise composite likelihood method for the estimation of this model. Finally, the effectiveness of our methodology is illustrated by analyzing point-referenced vegetation index data using the Gaussian copula as benchmark. Our developments have been implemented in an open-source package for the R statistical environment.",
       "links": {
         "doi": "https://doi.org/10.1016/j.jmva.2023.105277",
         "arxiv": "https://arxiv.org/abs/2305.18166"
@@ -42,7 +42,7 @@
       "venue": "BioMed Research International",
       "year": 2022,
       "type": "journal",
-      "abstract": "The COVID-19 pandemic has significantly impacted healthcare delivery, particularly for vulnerable populations such as the elderly. This study presents the implementation of a teledentistry platform designed to address dental emergencies for elderly patients in Chile during the pandemic. The platform, called TEGO, was developed as a web-based and mobile application solution to provide remote dental consultations and emergency care. The system enables general dentists and specialists to assess dental conditions remotely, provide recommendations, and coordinate emergency care when necessary. This work describes the platform's architecture, functionality, and implementation process, highlighting its role in maintaining access to dental care during lockdown periods. The platform addresses the critical need for accessible dental services for the elderly population, who are at higher risk for both COVID-19 complications and oral health issues.",
+      "abstract": "Objectives. To develop and implement a “semi-presential” technology platform to support urgent and priority dental care for the elderly in the context of the COVID-19 pandemic among the Chilean population. Methods. A dental mobile clinic was implemented along with the development of a technological platform designed to support emergency and priority dental procedures, including teleconsultation with specialists. Under strict biosafety protocols, dental care was provided in five Chilean regions between February and May 2021. Sociodemographic, medical, and dental data were recorded. Results. A total of 135 patients over sixty years old, with a mean age of 72 years, were treated, 48 males and 87 females were attended between February and May 2021 in five different regions of Chile. 53.3% required immediate or urgent treatment, and 24.4% were derived to specialists from whom 60.6% needed immediate or urgent treatment. 74.3% of teleconsultations were derived to an oral pathology specialist. Conclusion. It was shown that a “semi-presential” technology platform implemented in a mobile dental clinic can help elderly people who are impeded to look for traditional dental assistance during a pandemic.",
       "links": {
         "doi": "https://doi.org/10.1155/2022/6889285",
         "pdf": "https://downloads.hindawi.com/journals/bmri/2022/6889285.pdf"
@@ -54,7 +54,7 @@
       "venue": "Journal of Oral Research",
       "year": 2022,
       "type": "journal",
-      "abstract": "This paper presents TEGO, a novel teledentistry concept developed to address the dental care needs of elderly patients during the COVID-19 pandemic. The platform combines web-based and mobile application technologies to enable remote dental consultations and emergency care coordination. TEGO was designed specifically for the elderly population, taking into account their unique needs and potential technology barriers. The system allows dental professionals to assess conditions remotely, provide guidance, and coordinate in-person care when necessary. This work describes the conceptual framework, technological implementation, and initial deployment of the TEGO platform in Chile, demonstrating its effectiveness in maintaining access to dental services during pandemic-related restrictions.",
+      "abstract": "Objective: To develop a new concept of teledentistry for the elderly through a web platform and associated mobile application in the context of the COVID-19 pandemic. Material and Methods: A new concept for attention via teledentistry of the elderly supported by the web platform/app TEGO (Acronym for Tele-platform of Geriatric and Dental Specialties in Spanish) was developed. Priority and urgent dental care for elderly patients in the context of the COVID-19 pandemic was provided onboard a mobile dental clinic equipped with all the necessary conventional dental care facilities as well as state-of-the-art digital technology. Dental care was carried out in five cities of Chile. For the study, 135 elderly patients were treated. The tele-dental care model includes visit-appointment and remote interconsultation with a staff of specialists. To evaluate patient satisfaction aspects, regarding the service / care provided, a user satisfaction survey was applied. Results: A total of 68 questionnaires were completed by patients. The results showed high levels of patients’ satisfaction after the priority or urgent dental care, which reached above 75% in all dimensions of the questionnaire (Access to dental care, user treatment, platform, recommendation). Conclusion: The generation of a technological eco-system for teledentistry can provide a series of important advantages in the attention of elderly patients, by optimizing the dental care coverage by different specialists who can provide attention to a population that has limited or no access to them.",
       "links": {
         "doi": "https://doi.org/10.17126/joralres.2022.023",
         "pdf": "https://www.joralres.com/index.php/JOralRes/article/view/joralres.2022.023/995"
@@ -66,6 +66,7 @@
       "venue": "Journal of Oral Research",
       "year": 2022,
       "type": "journal",
+      "abstract": "Objective: To generate teledentistry protocols for urgent and priority dental care for the elderly population through a technological web platform and mobile application in the context of the COVID-19 pandemic. Material and Methods: Teledentistry protocols were developed in five sequential steps: Staff training, Patient recruitment, Patient admission, Patient reception and Patient care. Reasons for admission were categorized in urgencies and priority dental treatment. Results: The most prevalent reasons for consultation were prosthesis mismatch (18.37%), dental pain (16.33%) and fractured teeth (14.29%). In urgencies by need for treatment: due to infection or pain (24.44%) or to avoid pulp involvement (26.67%). The rest of the care did not require immediate attention. Regarding the OHIP-14Sp survey prior to care, in which patients were consulted for problems with their teeth, mouth or prosthesis, two questions were answered per dimension, for each dimension the following values were obtained: functional limitation (71.30% and 50.44%), physical pain (68.97% and 70.18%), psychological discomfort (75.00% and 74.14%), physical disability (57.39% and 46.09%), psychological disability (37.72% and 53.91%), social disability (33.91% and 30.97%) and handicap (27.83% and 25.86%). Conclusion: A teledentistry protocol for urgent and priority dental care of the elderly in the context of the COVID-19 pandemic with a focus on a general dentist remotely supported specialists was a useful tool to effectively systematize the care of elderly patients, reducing risk of exposure to COVID-19 and solving dental urgencies in this population.",
       "links": {
         "doi": "https://doi.org/10.17126/joralres.2022.026"
       }
@@ -76,7 +77,7 @@
       "venue": "Stochastic Analysis and Applications",
       "year": 2022,
       "type": "journal",
-      "abstract": "This paper introduces REDACS (Regional Emergency-Driven Adaptive Cluster Sampling), a novel statistical sampling methodology designed for effective COVID-19 management at the regional level. The approach combines adaptive cluster sampling techniques with emergency-driven decision-making processes to optimize resource allocation and data collection during pandemic situations. REDACS addresses the challenges of rapidly changing epidemiological conditions by adapting sampling strategies based on real-time regional data. The methodology enables more efficient monitoring, testing, and resource distribution in response to evolving COVID-19 dynamics. This work presents the theoretical framework, implementation strategies, and demonstrates the effectiveness of REDACS in managing regional COVID-19 responses through adaptive statistical sampling.",
+      "abstract": "As COVID-19 is spreading, national agencies need to monitor and track several metrics. Since we do not have perfect testing programs on the hand, one needs to develop an advanced sampling strategies for prevalence study, control and management. Here we introduce REDACS: Regional emergency-driven adaptive cluster sampling for effective COVID-19 management and control and justify its usage for COVID-19. We show its advantages over classical massive individual testing sampling plans. We also point out how regional and spatial heterogeneity underlines proper sampling. Fundamental importance of adaptive control parameters from emergency health stations and medical frontline is outlined. Since the Northern hemisphere entered Autumn and Winter season (this paper was originally submitted in November 2020), practical illustration from spatial heterogeneity of Chile (Southern hemisphere, which already experienced COVID-19 winter outbreak peak) is underlying the importance of proper regional heterogeneity of sampling plan. We explain the regional heterogeneity by microbiological backgrounds and link it to behavior of Lyapunov exponents. We also discuss screening by antigen tests from the perspective of “on the fly” biomarker validation, i.e., during the screening.",
       "links": {
         "doi": "https://doi.org/10.1080/07362994.2022.2033126",
         "pdf": "https://www.tandfonline.com/doi/pdf/10.1080/07362994.2022.2033126"
@@ -120,6 +121,24 @@
     }
   ],
   "underReview": [
+    {
+      "title": "A Geometric-Frailty Ali-Mikhail-Haq-Type Copula for Spatial Random Fields",
+      "authors": ["Moreno Bevilacqua", "Eloy Alvarado", "Christian Caamaño-Carrillo"],
+      "venue": "",
+      "year": null,
+      "type": "journal",
+      "status": "Under Review",
+      "links": {}
+    },
+    {
+      "title": "Directional Residual Dependence in Replicated Discrete Health Maps: A Bootstrap-Calibrated Copula Score Test",
+      "authors": ["Eloy Alvarado", "Héctor Araya", "Francisco Plaza-Vega"],
+      "venue": "",
+      "year": null,
+      "type": "journal",
+      "status": "Submitted",
+      "links": {}
+    },
     {
       "title": "Arbitrary-shape determinantal gamma fields",
       "authors": ["Eloy Alvarado"],

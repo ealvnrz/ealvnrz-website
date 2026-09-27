@@ -1,0 +1,123 @@
+---
+title: 'Post de referencia'
+description: 'Guía de la sintaxis disponible para escribir posts en este sitio.'
+date: 2026-09-27
+tags: ['referencia']
+authors: ['ealvnrz']
+# image: './banner.png'  # opcional: imagen de portada guardada en la carpeta del post
+draft: true # true = no se publica; cambiar a false para publicar
+---
+
+import Callout from '@/components/Callout.astro'
+
+{/* Este post es solo una referencia y no se publica mientras tenga draft: true. */}
+
+Este post muestra la sintaxis disponible para escribir en el blog. No se publica mientras tenga `draft: true`. Para verlo en local:
+
+1. Cambia `draft` a `false` en este archivo (y en `subpost.mdx`).
+2. Cambia `BLOG_ENABLED` a `true` en `src/consts.ts`.
+3. Ejecuta `npm run dev` y abre `/blog/example-post`.
+
+## Estructura de archivos
+
+Cada post es un archivo `.md` o `.mdx` dentro de `src/content/blog`. Un post con subposts o imágenes propias va en una carpeta:
+
+```text
+src/content/blog/
+  mi-post.mdx             → /blog/mi-post
+  post-largo/
+    index.mdx             → /blog/post-largo
+    parte-1.mdx           → /blog/post-largo/parte-1 (subpost)
+    banner.png            → imagen de portada o figuras
+```
+
+Los títulos `##` y `###` generan la tabla de contenidos. No uses `#`: el título del post se genera desde el frontmatter.
+
+## Texto
+
+**Negrita**, _cursiva_, ~~tachado~~ y `código en línea`. El código en línea puede tener resaltado de sintaxis agregando el lenguaje al final: `mean(x, na.rm = TRUE){:r}`.
+
+Los enlaces externos se abren en una pestaña nueva automáticamente: [CRAN](https://cran.r-project.org/). También funcionan los emojis con shortcodes :tada: y las notas al pie[^1].
+
+[^1]: Las notas al pie se agrupan al final del post.
+
+## Matemáticas
+
+Las fórmulas se escriben en LaTeX y se renderizan con KaTeX. En línea: $\hat{\theta}_n \xrightarrow{p} \theta_0$. En bloque:
+
+$$
+C_\theta(u, v) = \left(u^{-\theta} + v^{-\theta} - 1\right)^{-1/\theta}, \qquad \theta > 0.
+$$
+
+## Bloques de código
+
+```r title="simulacion.R" {3-4}
+set.seed(123)
+n <- 1000
+x <- rnorm(n)
+y <- 2 * x + rnorm(n)
+fit <- lm(y ~ x)
+summary(fit)
+```
+
+Opciones disponibles después del lenguaje:
+
+- `title="archivo.R"` muestra el nombre del archivo.
+- `{3-4}` resalta líneas.
+- `ins={2}` y `del={1}` marcan líneas agregadas o eliminadas.
+- `collapse={1-5}` colapsa un rango de líneas.
+- `showLineNumbers={false}` o `startLineNumber={10}` controlan la numeración.
+
+```r ins={2} del={1}
+fit <- lm(y ~ x)
+fit <- glm(y ~ x, family = gaussian())
+```
+
+Los bloques de terminal (`bash`, `sh`, `powershell`, etc.) se muestran sin números de línea:
+
+```bash
+npm run dev
+```
+
+## Callouts
+
+Los callouts requieren importar el componente al inicio del archivo (`import Callout from '@/components/Callout.astro'`).
+
+<Callout variant="definition" title="Cópula">
+  Una cópula bivariada es una función de distribución en $[0, 1]^2$ con marginales uniformes.
+</Callout>
+
+<Callout variant="theorem" title="Sklar">
+  Para toda distribución conjunta $H$ con marginales $F$ y $G$ existe una cópula $C$ tal que $H(x, y) = C(F(x), G(y))$.
+</Callout>
+
+<Callout variant="proof" defaultOpen={false}>
+  Este callout aparece colapsado porque usa `defaultOpen={false}`.
+</Callout>
+
+Variantes disponibles: `note`, `tip`, `warning`, `danger`, `important`, `definition`, `theorem`, `lemma`, `proof`, `corollary`, `proposition`, `axiom`, `conjecture`, `notation`, `remark`, `intuition`, `recall`, `explanation`, `example`, `exercise`, `problem`, `answer`, `solution` y `summary`.
+
+## Tablas
+
+| Cópula    | Dependencia en colas | Simetría radial |
+| --------- | -------------------- | --------------- |
+| Gaussiana | Ninguna              | Sí              |
+| Clayton   | Cola inferior        | No              |
+
+## Imágenes
+
+Guarda la imagen en la carpeta del post y referénciala con una ruta relativa. Astro la optimiza automáticamente:
+
+```md
+![Texto alternativo](./figura.png)
+```
+
+Para la imagen de portada, usa `image: './banner.png'` en el frontmatter.
+
+## Subposts
+
+Un post largo puede dividirse en subposts: archivos adicionales dentro de la carpeta del post. Aparecen en una barra lateral de navegación y se ordenan por fecha y luego por el campo `order`. Este post tiene uno de ejemplo en `subpost.mdx`.
+
+## Proyectos
+
+La página `/about` lista los proyectos de `src/content/projects`. Hay uno de ejemplo, también oculto con `draft: true`, en `src/content/projects/example-project.md`.

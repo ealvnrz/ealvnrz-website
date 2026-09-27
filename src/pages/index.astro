@@ -4,7 +4,7 @@ import SocialIcons from '@/components/SocialIcons.astro'
 import DiscordPresence from '@/components/DiscordPresence'
 import GithubCalendar from '@/components/GithubCalendar'
 import { Badge } from '@/components/ui/badge'
-import { SITE, SOCIAL_LINKS } from '@/consts'
+import { SOCIAL_LINKS } from '@/consts'
 import Layout from '@/layouts/Layout.astro'
 
 // Discord User ID
@@ -75,11 +75,7 @@ const GITHUB_USERNAME = 'ealvnrz'
           @{GITHUB_USERNAME}
         </a>
       </div>
-      <GithubCalendar 
-        client:load
-        username={GITHUB_USERNAME}
-        year={2026}
-      />
+      <GithubCalendar client:load username={GITHUB_USERNAME} />
     </div>
   </section>
 

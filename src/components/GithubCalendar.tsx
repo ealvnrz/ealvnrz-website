@@ -98,12 +98,13 @@ const GithubCalendar: FunctionComponent<Props> = ({ username, year, ...props }) 
     return <Skeleton className="h-[150px] w-full" />
   }
 
-  // Filter contributions for the specified year (or current year)
+  // Filter contributions for the specified year (or current year). Compare the
+  // date string directly: new Date('YYYY-MM-DD') is parsed as UTC, which shifts
+  // January 1st into the previous year in timezones west of UTC (e.g. Chile).
   const targetYear = year || new Date().getFullYear()
-  const yearData = data.contributions.filter((activity) => {
-    const activityDate = new Date(activity.date)
-    return activityDate.getFullYear() === targetYear
-  })
+  const yearData = data.contributions.filter((activity) =>
+    activity.date.startsWith(`${targetYear}-`),
+  )
 
   return (
     <div className="[&_.react-activity-calendar\\_\\_legend-month]:text-foreground/80 w-full overflow-x-auto flex justify-center">

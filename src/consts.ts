@@ -4,12 +4,23 @@ export const SITE: Site = {
   title: 'Eloy Alvarado Narváez',
   description:
     'Assistant Professor in Statistics at Pontificia Universidad Católica de Chile. Research in spatial statistics, copula modeling, and statistical methods.',
-  href: 'https://your-website.com',
+  href: 'https://ealvnrz.vercel.app',
   author: 'Eloy Alvarado Narváez',
   locale: 'en-US',
-  featuredPostCount: 2,
   postsPerPage: 3,
 }
+
+// Blog posts live in src/content/blog. While disabled, these routes are not
+// generated and are left out of the sitemap.
+export const BLOG_ENABLED = false
+export const BLOG_ROUTES = ['/blog', '/tags', '/authors', '/about']
+
+// Author names highlighted in publication lists (compared case-insensitively)
+export const AUTHOR_NAME_VARIANTS = [
+  'Eloy Alvarado',
+  'E. Alvarado',
+  'Eloy Alvarado Narváez',
+]
 
 export const NAV_LINKS: SocialLink[] = [
   {

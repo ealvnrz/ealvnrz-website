@@ -3,8 +3,11 @@ import Link from '@/components/Link.astro'
 import PageHead from '@/components/PageHead.astro'
 import Layout from '@/layouts/Layout.astro'
 
-// GitHub raw URL for the CV PDF
-const cvPdfUrl = 'https://raw.githubusercontent.com/ealvnrz/CV/master/cv_en/cv_en.pdf'
+// jsDelivr serves the PDF as application/pdf, so browsers can display it inline.
+// raw.githubusercontent.com serves it as application/octet-stream, which blocks
+// inline viewing but makes it a reliable download link.
+const cvEmbedUrl = 'https://cdn.jsdelivr.net/gh/ealvnrz/CV@master/cv_en/cv_en.pdf'
+const cvDownloadUrl = 'https://raw.githubusercontent.com/ealvnrz/CV/master/cv_en/cv_en.pdf'
 const cvGitHubUrl = 'https://github.com/ealvnrz/CV/blob/master/cv_en/cv_en.pdf'
 ---
 
@@ -20,7 +23,7 @@ const cvGitHubUrl = 'https://github.com/ealvnrz/CV/blob/master/cv_en/cv_en.pdf'
       </div>
       <div class="flex gap-2">
         <Link
-          href={cvPdfUrl}
+          href={cvDownloadUrl}
           class="text-sm text-primary hover:text-primary/80 underline"
           external
           download
@@ -41,7 +44,7 @@ const cvGitHubUrl = 'https://github.com/ealvnrz/CV/blob/master/cv_en/cv_en.pdf'
     <!-- PDF Viewer using object tag for better embedding -->
     <div class="w-full border bg-muted/30" style="min-height: 800px;">
       <object
-        data={`${cvPdfUrl}#toolbar=1&navpanes=1&scrollbar=1`}
+        data={`${cvEmbedUrl}#toolbar=1&navpanes=1&scrollbar=1`}
         type="application/pdf"
         class="w-full h-full"
         style="min-height: 800px; border: none;"
@@ -52,7 +55,7 @@ const cvGitHubUrl = 'https://github.com/ealvnrz/CV/blob/master/cv_en/cv_en.pdf'
             Your browser doesn't support PDF embedding.
           </p>
           <p class="mb-4">
-            <Link href={cvPdfUrl} class="text-primary hover:text-primary/80 underline" external download>
+            <Link href={cvDownloadUrl} class="text-primary hover:text-primary/80 underline" external download>
               Download the PDF
             </Link>
             {' '}or{' '}

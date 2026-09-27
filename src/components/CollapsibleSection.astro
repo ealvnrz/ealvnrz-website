@@ -1,0 +1,27 @@
+---
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<div>
+  <details open data-animate-open class="group">
+    <summary
+      class="cursor-pointer list-none [&::-webkit-details-marker]:hidden"
+    >
+      <h2 class="mb-4 inline-flex items-center gap-2 text-2xl font-semibold">
+        {title}
+        <span
+          class="text-muted-foreground text-sm font-normal transition-transform group-open:rotate-180"
+        >
+          ▼
+        </span>
+      </h2>
+    </summary>
+    <ul class="flex flex-col gap-y-4">
+      <slot />
+    </ul>
+  </details>
+</div>

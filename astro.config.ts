@@ -19,24 +19,27 @@ import type { ExpressiveCodeTheme } from 'rehype-expressive-code'
 
 import tailwindcss from '@tailwindcss/vite'
 
+import { BLOG_ENABLED, BLOG_ROUTES } from './src/consts'
+
 export default defineConfig({
-  site: 'https://your-website.com',
+  site: 'https://ealvnrz.vercel.app',
   integrations: [
     mdx(),
     react(),
-    sitemap(),
-    icon({
-      include: {
-        'fa-brands': ['*'],
-      },
+    sitemap({
+      filter: (page) =>
+        BLOG_ENABLED ||
+        !BLOG_ROUTES.some((route) =>
+          new URL(page).pathname.startsWith(`${route}/`),
+        ),
     }),
+    icon(),
   ],
   vite: {
     plugins: [tailwindcss()],
   },
   server: {
     port: 1234,
-    host: true,
   },
   devToolbar: {
     enabled: false,
